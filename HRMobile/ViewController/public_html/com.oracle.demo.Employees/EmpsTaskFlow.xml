@@ -5,7 +5,9 @@
     <view id="empList">
       <page>/empList.amx</page>
     </view>
-    <view id="graph"></view>
+    <view id="graph">
+      <page>/graph.amx</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>empList</from-activity-id>
       <control-flow-case id="__2">

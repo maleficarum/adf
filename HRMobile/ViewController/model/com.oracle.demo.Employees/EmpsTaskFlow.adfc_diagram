@@ -24,6 +24,8 @@
       <property
          name="activityId">graph</property>
       <property
+         name="page">/graph.amx</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>graph&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
