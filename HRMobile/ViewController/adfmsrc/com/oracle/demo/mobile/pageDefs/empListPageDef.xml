@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.62.94" id="empListPageDef"
+                Package="com.oracle.demo.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="getEmployees.result" DataControl="EmployeesWSDataControl" RangeSize="25"
+                    BeanClass="com.oracle.demo.application.EmployeesWSDataControl.getEmployees"
+                    id="getEmployeesIterator"/>
+    <accessorIterator MasterBinding="getEmployeesIterator" Binds="result" RangeSize="25"
+                      DataControl="EmployeesWSDataControl"
+                      BeanClass="com.oracle.demo.application.EmployeesWSDataControl.getEmployees.result"
+                      id="resultIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="resultIterator" id="result">
+      <nodeDefinition DefName="com.oracle.demo.application.EmployeesWSDataControl.getEmployees.result" Name="result0">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="Salary"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="DepartmentName"/>
+          <Item Value="AnnualSalary"/>
+          <Item Value="_ROWNUM___ATTR_"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="getEmployees" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getEmployees"
+                  IsViewObjectMethod="false" DataControl="EmployeesWSDataControl"
+                  InstanceName="data.EmployeesWSDataControl"
+                  ReturnName="data.EmployeesWSDataControl.methodResults.getEmployees_EmployeesWSDataControl_getEmployees_result"/>
+    <tree IterBinding="resultIterator" id="result1">
+      <nodeDefinition DefName="com.oracle.demo.application.EmployeesWSDataControl.getEmployees.result" Name="result10">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="Salary"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="DepartmentId"/>
+          <Item Value="DepartmentName"/>
+          <Item Value="AnnualSalary"/>
+          <Item Value="_ROWNUM___ATTR_"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

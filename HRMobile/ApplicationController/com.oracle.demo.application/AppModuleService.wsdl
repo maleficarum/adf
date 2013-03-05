@@ -83,7 +83,7 @@
   </wsdl:binding>
   <wsdl:service name="AppModuleService">
     <wsdl:port name="AppModuleServiceSoapHttpPort" binding="tns:AppModuleServiceSoapHttp">
-      <soap:address location="http://localhost:7101/HRMobile-ApplicationController-context-root/EmployeesWSDataControlService"/>
+      <soap:address location="http://10.151.134.232:7101/HRMobile-ApplicationController-context-root/EmployeesWSDataControlService"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

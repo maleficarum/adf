@@ -5,11 +5,11 @@
       <RefAddresses>
          <XmlRefAddr addrType="WebServiceConnection">
             <Contents>
-               <wsconnection description="http://127.0.0.1:7101/HRSystem-Model-context-root/AppModuleService?wsdl" service="{/com/oracle/demo/model/common/}AppModuleService">
+               <wsconnection description="http://10.151.134.232:7101/HRSystem-Model-context-root/AppModuleService?wsdl" service="{/com/oracle/demo/model/common/}AppModuleService">
                   <model name="{/com/oracle/demo/model/common/}AppModuleService" xmlns="http://oracle.com/ws/model">
                      <service name="{/com/oracle/demo/model/common/}AppModuleService">
                         <port name="AppModuleServiceSoapHttpPort" binding="{/com/oracle/demo/model/common/}AppModuleServiceSoapHttp">
-                           <soap addressUrl="http://127.0.0.1:7101/HRSystem-Model-context-root/AppModuleService" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                           <soap addressUrl="http://10.151.134.232:7101/HRSystem-Model-context-root/AppModuleService" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
                            <operation name="getEmployee">
                               <soap soapAction="/com/oracle/demo/model/common/getEmployee" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
                               <output name=""/>

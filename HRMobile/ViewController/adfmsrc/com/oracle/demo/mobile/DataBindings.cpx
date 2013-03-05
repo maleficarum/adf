@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.62.94" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.oracle.demo.mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/empList.amx" usageId="com_oracle_demo_mobile_empListPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_oracle_demo_mobile_empListPageDef" path="com.oracle.demo.mobile.pageDefs.empListPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="EmployeesWSDataControl" path="com.oracle.demo.application.EmployeesWSDataControl"/>
+  </dataControlUsages>
+</Application>

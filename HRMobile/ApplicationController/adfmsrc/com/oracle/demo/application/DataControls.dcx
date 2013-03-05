@@ -35,8 +35,8 @@
     <Source>
       <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="EmployeesWSDataControl" version="1.0"
                   provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
-                  wsdl="com.oracle.demo.application/AppModuleService.wsdl" ensureKeyAttribute="true"
-                  UsePersistedStructure="false">
+                  wsdl="http://10.151.134.232:7101/HRSystem-Model-context-root/AppModuleService?wsdl"
+                  ensureKeyAttribute="true" UsePersistedStructure="false">
         <service name="AppModuleService" namespace="/com/oracle/demo/model/common/" connection="EmployeesWSDataControl">
           <port name="AppModuleServiceSoapHttpPort">
             <operation name="getEmployees"/>

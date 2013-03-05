@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:listView var="row" value="#{bindings.result1.collectionModel}" fetchSize="#{bindings.result1.rangeSize}"
+                  dividerAttribute="FirstName" dividerMode="firstLetter" id="lv1">
+      <amx:listItem id="li1">
+        <amx:tableLayout width="100%" id="tl1">
+          <amx:rowLayout id="rl1">
+            <amx:cellFormat width="40px" halign="center" id="cf1">
+              <amx:image source="#{row.FirstName}" id="i1"/>
+            </amx:cellFormat>
+            <amx:cellFormat width="100%" height="43px" id="cf2">
+              <amx:outputText value="#{row.FirstName}" id="ot3"/>
+            </amx:cellFormat>
+          </amx:rowLayout>
+        </amx:tableLayout>
+      </amx:listItem>
+    </amx:listView>
+    <amx:facet name="header">
+      <amx:outputText value="Employees" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+      <amx:commandButton id="cb1" text="Graph" action="showGraph"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:commandButton id="cb2"/>
+    </amx:facet>
+    <amx:facet name="footer">
+      <amx:outputText value="Footer" id="ot2"/>
+    </amx:facet>
+  </amx:panelPage>
+</amx:view>
