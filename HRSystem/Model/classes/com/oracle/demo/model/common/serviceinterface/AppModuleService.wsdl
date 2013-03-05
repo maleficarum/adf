@@ -1,0 +1,73 @@
+<wsdl:definitions
+     name="AppModuleService"
+     targetNamespace="/com/oracle/demo/model/common/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="/com/oracle/demo/model/common/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:types="/com/oracle/demo/model/common/types/"
+    >
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="classpath:/META-INF/wsdl/ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="/com/oracle/demo/model/common/types/" schemaLocation="AppModuleService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="AppModuleService_getDepartments">
+        <wsdl:part name="parameters" element="types:getDepartments"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getDepartmentsResponse">
+        <wsdl:part name="parameters" element="types:getDepartmentsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getEmployee">
+        <wsdl:part name="parameters" element="types:getEmployee"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getEmployeeResponse">
+        <wsdl:part name="parameters" element="types:getEmployeeResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="AppModuleService">
+        <wsdl:documentation/>
+        <wsdl:operation name="getDepartments">
+            <wsdl:input message="tns:AppModuleService_getDepartments"/>
+            <wsdl:output message="tns:AppModuleService_getDepartmentsResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getEmployee">
+            <wsdl:input message="tns:AppModuleService_getEmployee"/>
+            <wsdl:output message="tns:AppModuleService_getEmployeeResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="AppModuleServiceSoapHttp" type="tns:AppModuleService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getDepartments">
+            <soap:operation soapAction="/com/oracle/demo/model/common/getDepartments"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getEmployee">
+            <soap:operation soapAction="/com/oracle/demo/model/common/getEmployee"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="AppModuleService">
+        <wsdl:port name="AppModuleServiceSoapHttpPort" binding="tns:AppModuleServiceSoapHttp">
+            <soap:address location="http://localhost:7101/HRSystem-Model-context-root/AppModuleService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
