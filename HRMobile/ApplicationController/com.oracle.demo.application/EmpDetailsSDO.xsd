@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="/com/oracle/demo/model/common/" xmlns:sdoJava="commonj.sdo/java" sdoJava:package="com.oracle.demo.model.common" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:sdoXML="commonj.sdo/xml" xmlns="/com/oracle/demo/model/common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>Emp Details</xsd:documentation>
+  </xsd:annotation>
+  <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+  <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+  <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+  <xsd:complexType name="EmpDetailsSDO">
+    <xsd:annotation>
+      <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+        <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+          <attribute>EmployeeId</attribute>
+        </key>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="EmployeeId" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="FirstName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="LastName" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Email" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Salary" nillable="true" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="HireDate" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="JobId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="DepartmentId" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="DepartmentName" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="AnnualSalary" nillable="true" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="empDetailsSDO" type="EmpDetailsSDO"/>
+</xsd:schema>

@@ -2,7 +2,7 @@
 <adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
   <adfmf:feature id="com.oracle.demo.Employees" name="Employees">
     <adfmf:content id="com.oracle.demo.Employees.1">
-      <adfmf:amx/>
+      <adfmf:amx file="com.oracle.demo.Employees/EmpsTaskFlow.xml#EmpsTaskFlow"/>
     </adfmf:content>
   </adfmf:feature>
   <adfmf:feature id="com.oracle.demo.Help" name="Help">

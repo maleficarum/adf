@@ -1,5 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <hash n="adrs-workspace-properties">
+      <value n="adrs-instance-binding" v="DefaultServer"/>
+   </hash>
    <value n="application-package-prefix" v="com.oracle.demo"/>
    <value n="appTemplateId" v="adfMobileAppTemplate"/>
    <hash n="component-versions">
@@ -24,6 +27,63 @@
       <hash><url n="URL" path="ApplicationController/ApplicationController.jpr"/></hash>
       <hash><url n="URL" path="ViewController/ViewController.jpr"/></hash>
    </list>
+   <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
+      <hash n="profileDefinitions">
+         <hash n="ANDROID_MOBILE_NATIVE_archive1">
+            <hash n="android_options"/>
+            <hash n="archiveOptions">
+               <value n="hasManifest" v="true"/>
+            </hash>
+            <hash n="fileGroups">
+               <list n="groups">
+                  <hash>
+                     <list n="contributors">
+                        <hash>
+                           <value n="type" v="2"/>
+                        </hash>
+                        <hash>
+                           <value n="type" v="7"/>
+                        </hash>
+                     </list>
+                     <value n="displayName" v="Project Output"/>
+                     <hash n="filters">
+                        <list n="rules">
+                           <hash>
+                              <value n="DefaultFilters" v=""/>
+                           </hash>
+                        </list>
+                     </hash>
+                     <value n="internalName" v="project-output"/>
+                     <value n="type" v="1"/>
+                  </hash>
+               </list>
+            </hash>
+            <url n="jarURL" path="deploy/ANDROID_MOBILE_NATIVE_archive1/java_res/assets/storage/jvm/lib/user/ANDROID_MOBILE_NATIVE_archive1.jar/"/>
+            <hash n="libraryDependencies">
+               <value n="IncludeLibrariesFromOtherContainers" v="true"/>
+            </hash>
+            <hash n="mnfImageOptions">
+               <value n="icon1" v="resources/android/display-ldpi-icon.png"/>
+               <value n="icon2" v="resources/android/display-mdpi-icon.png"/>
+               <value n="icon3" v="resources/android/display-hdpi-icon.png"/>
+               <value n="icon4" v="resources/android/display-xhdpi-icon.png"/>
+               <value n="landSplashScreen1" v="resources/android/display-land-ldpi-splashscreen.png"/>
+               <value n="landSplashScreen2" v="resources/android/display-land-mdpi-splashscreen.png"/>
+               <value n="landSplashScreen3" v="resources/android/display-land-hdpi-splashscreen.png"/>
+               <value n="landSplashScreen4" v="resources/android/display-land-xhdpi-splashscreen.png"/>
+               <value n="portSplashScreen1" v="resources/android/display-port-ldpi-splashscreen.png"/>
+               <value n="portSplashScreen2" v="resources/android/display-port-mdpi-splashscreen.png"/>
+               <value n="portSplashScreen3" v="resources/android/display-port-hdpi-splashscreen.png"/>
+               <value n="portSplashScreen4" v="resources/android/display-port-xhdpi-splashscreen.png"/>
+            </hash>
+            <value n="profileClass" v="oracle.adfmf.framework.dt.deploy.android.AndroidProfile"/>
+            <value n="profileName" v="ANDROID_MOBILE_NATIVE_archive1"/>
+         </hash>
+      </hash>
+      <list n="profileList">
+         <string v="ANDROID_MOBILE_NATIVE_archive1"/>
+      </list>
+   </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
       <hash n="ApplicationSrcContentSet">
          <list n="constituent-sets">

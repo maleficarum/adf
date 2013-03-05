@@ -25,6 +25,12 @@
     <wsdl:message name="AppModuleService_getEmployeeResponse">
         <wsdl:part name="parameters" element="types:getEmployeeResponse"/>
     </wsdl:message>
+    <wsdl:message name="AppModuleService_getEmployees">
+        <wsdl:part name="parameters" element="types:getEmployees"/>
+    </wsdl:message>
+    <wsdl:message name="AppModuleService_getEmployeesResponse">
+        <wsdl:part name="parameters" element="types:getEmployeesResponse"/>
+    </wsdl:message>
     <wsdl:portType name="AppModuleService">
         <wsdl:documentation/>
         <wsdl:operation name="getDepartments">
@@ -35,6 +41,11 @@
         <wsdl:operation name="getEmployee">
             <wsdl:input message="tns:AppModuleService_getEmployee"/>
             <wsdl:output message="tns:AppModuleService_getEmployeeResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getEmployees">
+            <wsdl:input message="tns:AppModuleService_getEmployees"/>
+            <wsdl:output message="tns:AppModuleService_getEmployeesResponse"/>
             <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
         </wsdl:operation>
     </wsdl:portType>
@@ -64,10 +75,22 @@
                 <soap:fault name="ServiceException" use="literal"/>
             </wsdl:fault>
         </wsdl:operation>
+        <wsdl:operation name="getEmployees">
+            <soap:operation soapAction="/com/oracle/demo/model/common/getEmployees"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
     </wsdl:binding>
     <wsdl:service name="AppModuleService">
         <wsdl:port name="AppModuleServiceSoapHttpPort" binding="tns:AppModuleServiceSoapHttp">
-            <soap:address location="http://localhost:7101/HRSystem-Model-context-root/AppModuleService"/>
+            <soap:address location="http://120.0.0.1:7101/HRSystem-Model-context-root/AppModuleService"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

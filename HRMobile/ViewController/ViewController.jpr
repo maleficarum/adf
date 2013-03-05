@@ -54,6 +54,7 @@
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADFMobile"/>
+         <string v="ADFm"/>
          <string v="HTML"/>
          <string v="JAVASCRIPT"/>
          <string v="Java"/>

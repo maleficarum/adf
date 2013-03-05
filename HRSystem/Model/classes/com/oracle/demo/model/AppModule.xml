@@ -84,5 +84,15 @@
         Name="empId"
         Type="java.lang.Integer"/>
     </Method>
+    <Method
+      Name="getEmployees"
+      MethodName="getEmployees">
+      <Return
+        Type="java.util.List">
+        <Element
+          Type="com.oracle.demo.model.EmpDetailsRowImpl"
+          ViewObjectName="EmpDetails1"/>
+      </Return>
+    </Method>
   </ServiceInterface>
 </AppModule>

@@ -54,6 +54,36 @@
    <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
       <value n="hasDataControls" v="true"/>
    </hash>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+DepartmentsViewSDO.xsd"/>
+                  <string v="+sdoJava.xsd"/>
+                  <string v="+ServiceException.wsdl"/>
+                  <string v="+AppModuleService.xsd"/>
+                  <string v="+datagraph.xsd"/>
+                  <string v="+ServiceException.xsd"/>
+                  <string v="+sdoModel.xsd"/>
+                  <string v="+EmpDetailsSDO.xsd"/>
+                  <string v="+BC4JService.xsd"/>
+                  <string v="+sdoXML.xsd"/>
+                  <string v="+AppModuleService.wsdl"/>
+               </list>
+               <list n="url-path">
+                  <url path="com.oracle.demo.application/"/>
+               </list>
+            </hash>
+         </list>
+         <list n="pattern-filters">
+            <string v="+*"/>
+         </list>
+         <list n="url-path">
+            <url path="."/>
+         </list>
+      </hash>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADFMobile"/>

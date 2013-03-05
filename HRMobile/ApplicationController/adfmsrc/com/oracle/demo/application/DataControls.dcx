@@ -25,4 +25,26 @@
                        xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
     </Source>
   </AdapterDataControl>
+  <AdapterDataControl id="EmployeesWSDataControl" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.webservice.WSDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="com.oracle.demo.application.EmployeesWSDataControl"
+                      BeanClass="com.oracle.demo.application.EmployeesWSDataControl"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="EmployeesWSDataControl" version="1.0"
+                  provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
+                  wsdl="com.oracle.demo.application/AppModuleService.wsdl" ensureKeyAttribute="true"
+                  UsePersistedStructure="false">
+        <service name="AppModuleService" namespace="/com/oracle/demo/model/common/" connection="EmployeesWSDataControl">
+          <port name="AppModuleServiceSoapHttpPort">
+            <operation name="getEmployees"/>
+            <operation name="getDepartments"/>
+            <operation name="getEmployee"/>
+          </port>
+        </service>
+      </definition>
+    </Source>
+  </AdapterDataControl>
 </DataControlConfigs>

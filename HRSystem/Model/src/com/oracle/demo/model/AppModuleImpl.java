@@ -1,5 +1,6 @@
 package com.oracle.demo.model;
 
+import java.util.ArrayList;
 import java.util.Collections;
 
 import java.util.List;
@@ -27,6 +28,17 @@ public class AppModuleImpl extends ApplicationModuleImpl {
     
     public Row getEmployee(Integer empId) {
         return null;
+    }
+    
+    public List getEmployees() {
+        List list = new ArrayList();
+        EmpDetailsImpl view = this.getEmpDetails1();
+        
+        while(view.hasNext()) {
+            list.add(view.next());
+        }
+        
+        return list;
     }
 
     /**

@@ -30,4 +30,16 @@
             </sequence>
         </complexType>
     </element>
+    <element name="getEmployees">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="getEmployeesResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:EmpDetailsSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
 </schema>

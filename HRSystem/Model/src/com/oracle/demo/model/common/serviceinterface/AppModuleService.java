@@ -25,6 +25,8 @@ import oracle.webservices.annotations.SDODatabinding;
 @PortableWebService(targetNamespace="/com/oracle/demo/model/common/", name="AppModuleService", wsdlLocation="com/oracle/demo/model/common/serviceinterface/AppModuleService.wsdl")
 @SDODatabinding(schemaLocation="com/oracle/demo/model/common/serviceinterface/AppModuleService.xsd")
 public interface AppModuleService {
+
+
     public static final String NAME = "{/com/oracle/demo/model/common/}AppModuleService";
 
     /**
@@ -45,4 +47,13 @@ public interface AppModuleService {
     @WebResult(name="result")
     EmpDetailsSDO getEmployee(@WebParam(mode = WebParam.Mode.IN, name="empId")
         Integer empId) throws ServiceException;
+
+    /**
+     * Exported method getEmployees from AppModule.
+     */
+    @WebMethod(action="/com/oracle/demo/model/common/getEmployees", operationName="getEmployees")
+    @RequestWrapper(targetNamespace="/com/oracle/demo/model/common/types/", localName="getEmployees")
+    @ResponseWrapper(targetNamespace="/com/oracle/demo/model/common/types/", localName="getEmployeesResponse")
+    @WebResult(name="result")
+    List<EmpDetailsSDO> getEmployees() throws ServiceException;
 }

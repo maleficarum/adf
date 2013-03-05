@@ -7,6 +7,8 @@
       <property
          name="activityId">empList</property>
       <property
+         name="page">/empList.amx</property>
+      <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>empList&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
