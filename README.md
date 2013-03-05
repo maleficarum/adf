@@ -1,4 +1,0 @@
-adf
-===
-
-ADF Workshop
