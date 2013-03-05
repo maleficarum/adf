@@ -2,4 +2,42 @@
 <SDM>
    <OverallProperties
       id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">empList</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>empList&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">200.05566</property>
+      <property
+         name="x">183.0</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">graph</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>graph&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">186.03711</property>
+      <property
+         name="x">418.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">showGraph</property>
+      <property
+         name="sdm:polyPoints">R50,224.0,200.07422,377.0,186.05566,L50</property>
+   </ControlFlowCase>
 </SDM>
