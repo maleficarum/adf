@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"></adfmf:features>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="com.oracle.demo.Employees" name="Employees">
+    <adfmf:content id="com.oracle.demo.Employees.1">
+      <adfmf:amx/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.oracle.demo.Help" name="Help">
+    <adfmf:content id="com.oracle.demo.Help.1">
+      <adfmf:localHTML url="com.oracle.demo.Help/help.html"/>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>
