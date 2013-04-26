@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:spacer id="s1" height="25"/>
+    <amx:tableLayout id="tl1" shortDesc="features-table" inlineStyle="width:100%;">
+      <amx:rowLayout id="rl1">
+        <amx:cellFormat id="cf1" shortDesc="features-column" inlineStyle="width:100%;">
+          <amx:panelGroupLayout id="pgl1" layout="wrap">
+            <amx:iterator var="row" value="#{bindings.features.collectionModel}" id="i1">
+              <amx:panelGroupLayout id="plam2" inlineStyle="width:33%;display:inline-block;" halign="center"
+                                    valign="middle">
+                <amx:tableLayout id="tl2">
+                  <amx:rowLayout id="rl2">
+                    <amx:cellFormat id="cf2" halign="center" valign="middle">
+                      <amx:commandLink id="cl1" actionListener="#{bindings.gotoFeature.execute}">
+                        <amx:image id="i2" source="/images/#{row.name}-springboard.png"
+                                   inlineStyle="width:36px;height:36px"/>
+                        <amx:setPropertyListener from="#{row.id}" to="#{pageFlowScope.FeatureId}" type="action"/>
+                      </amx:commandLink>
+                    </amx:cellFormat>
+                  </amx:rowLayout>
+                  <amx:rowLayout id="rl3">
+                    <amx:cellFormat id="cf3" halign="center" valign="middle">
+                      <amx:commandLink id="cl2" actionListener="#{bindings.gotoFeature.execute}">
+                        <amx:outputText value="#{row.name}" id="ot2"/>
+                        <amx:setPropertyListener from="#{row.id}" to="#{pageFlowScope.FeatureId}" type="action"/>
+                      </amx:commandLink>
+                    </amx:cellFormat>
+                  </amx:rowLayout>
+                </amx:tableLayout>
+                <amx:spacer id="s2" height="25"/>
+              </amx:panelGroupLayout>
+            </amx:iterator>
+          </amx:panelGroupLayout>
+        </amx:cellFormat>
+      </amx:rowLayout>
+    </amx:tableLayout>
+  </amx:panelPage>
+</amx:view>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.62.94" id="DataBindings"
+             SeparateXMLFiles="false" Package="mx.maleficarum.view" ClientType="Generic">
+  <pageMap>
+    <page path="/index.jsf" usageId="mx_maleficarum_view_indexPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="mx_maleficarum_view_indexPageDef" path="mx.maleficarum.view.pageDefs.indexPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="SpringBean" path="mx.maleficarum.model.SpringBean"/>
+  </dataControlUsages>
+</Application>

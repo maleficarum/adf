@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="Analytics" name="Analytics" icon="images/Analytics-navbar.png"
+                 image="images/Analytics-springboard.png">
+    <adfmf:content id="Analytics.1">
+      <adfmf:amx file="Analytics/Analytics.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Custom_Springboard" name="Custom_Springboard">
+    <adfmf:content id="Custom_Springboard.1">
+      <adfmf:amx file="Custom_Springboard/Custom_Springboard.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Calendar" name="Calendar" icon="images/Calendar-navbar.png"
+                 image="images/Calendar-springboard.png">
+    <adfmf:content id="Calendar.1">
+      <adfmf:amx file="Calendar/Calendar.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Contacts" name="Contacts" icon="images/Contacts-navbar.png"
+                 image="images/Contacts-springboard.png">
+    <adfmf:content id="Contacts.1">
+      <adfmf:amx file="Contacts/Contacts.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Conversations" name="Conversations" icon="images/Conversations-navbar.png"
+                 image="images/Conversations-springboard.png">
+    <adfmf:content id="Conversations.1">
+      <adfmf:amx file="Conversations/Conversations.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Map" name="Map" icon="images/Map-navbar.png" image="images/Map-springboard.png">
+    <adfmf:content id="Map.1">
+      <adfmf:amx file="Map/Map.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Notification" name="Notification" icon="images/Notification-navbar.png"
+                 image="images/Notification-springboard.png">
+    <adfmf:content id="Notification.1">
+      <adfmf:amx file="Notification/Notification.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Organization" name="Organization" icon="images/Organization-navbar.png"
+                 image="images/Organization-springboard.png">
+    <adfmf:content id="Organization.1">
+      <adfmf:amx file="Organization/Organization.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Settings" name="Settings" icon="images/Settings-navbar.png"
+                 image="images/Settings-springboard.png">
+    <adfmf:content id="Settings.1">
+      <adfmf:amx file="Settings/Settings.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="Tasks" name="Tasks" icon="images/Tasks-navbar.png" image="images/Tasks-springboard.png">
+    <adfmf:content id="Tasks.1">
+      <adfmf:amx file="Tasks/Tasks.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   name="SpringboardDemo" id="com.company.SpringboardDemo" appControllerFolder="ApplicationController">
+  <adfmf:featureReference id="Analytics"/>
+  <adfmf:featureReference id="Custom_Springboard" showOnNavigationBar="false" showOnSpringboard="false"/>
+  <adfmf:featureReference id="Calendar"/>
+  <adfmf:featureReference id="Contacts"/>
+  <adfmf:featureReference id="Conversations"/>
+  <adfmf:featureReference id="Map"/>
+  <adfmf:featureReference id="Notification"/>
+  <adfmf:featureReference id="Organization"/>
+  <adfmf:featureReference id="Settings"/>
+  <adfmf:featureReference id="Tasks"/>
+  <adfmf:navigation>
+    <adfmf:springboard enabled="true">
+      <adfmf:springboardFeatureReference id="Custom_Springboard"/>
+    </adfmf:springboard>
+  </adfmf:navigation>
+</adfmf:application>

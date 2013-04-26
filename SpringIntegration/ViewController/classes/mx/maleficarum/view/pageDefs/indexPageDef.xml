@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.62.94" id="indexPageDef"
+                Package="mx.maleficarum.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="SpringBean" id="SpringBeanIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="SpringBeanIterator" id="text">
+      <AttrNames>
+        <Item Value="text"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

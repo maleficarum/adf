@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.62.76" id="Custom_SpringboardPageDef"
+                Package="Custom_Springboard">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="ApplicationFeatures" id="ApplicationFeaturesIterator"/>
+    <accessorIterator MasterBinding="ApplicationFeaturesIterator" Binds="features" RangeSize="10"
+                      DataControl="ApplicationFeatures" BeanClass="oracle.adfmf.framework.FeatureInformation"
+                      id="featuresIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="featuresIterator" id="features">
+      <nodeDefinition DefName="oracle.adfmf.framework.FeatureInformation" Name="features0">
+        <AttrNames>
+          <Item Value="id"/>
+          <Item Value="icon"/>
+          <Item Value="image"/>
+          <Item Value="name"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="gotoFeature" InstanceName="data.ApplicationFeatures.dataProvider"
+                  DataControl="ApplicationFeatures" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="gotoFeature" IsViewObjectMethod="false">
+      <NamedData NDName="p0" NDValue="#{pageFlowScope.FeatureId}" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

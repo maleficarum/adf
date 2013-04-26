@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="index.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelStretchLayout topHeight="50px" id="psl1">
+                <f:facet name="top"/>
+                <f:facet name="center">
+                    <!-- id="af_one_column_header_stretched"  -->
+                    <af:decorativeBox theme="dark" id="db2">
+                        <f:facet name="center">
+                            <af:decorativeBox theme="medium" id="db1">
+                                <f:facet name="center">
+                                    <af:inputText value="#{bindings.text.inputValue}"
+                                                  label="Prueba"
+                                                  required="#{bindings.text.hints.mandatory}"
+                                                  columns="#{bindings.text.hints.displayWidth}"
+                                                  maximumLength="#{bindings.text.hints.precision}"
+                                                  shortDesc="#{bindings.text.hints.tooltip}" id="it1">
+                                        <f:validator binding="#{bindings.text.validator}"/>
+                                    </af:inputText>
+                                </f:facet>
+                            </af:decorativeBox>
+                        </f:facet>
+                    </af:decorativeBox>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>

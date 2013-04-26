@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.62.76" id="DataBindings"
+             SeparateXMLFiles="false" Package="mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/Custom_Springboard/Custom_Springboard.amx" usageId="mobile_Custom_SpringboardPageDef"/>
+    <page path="/Analytics/Analytics.amx" usageId="mobile_AnalyticsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="mobile_Custom_SpringboardPageDef" path="Custom_Springboard.Custom_SpringboardPageDef"/>
+    <page id="mobile_AnalyticsPageDef" path="Analytics.AnalyticsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="ApplicationFeatures" path="application.ApplicationFeatures"/>
+  </dataControlUsages>
+</Application>

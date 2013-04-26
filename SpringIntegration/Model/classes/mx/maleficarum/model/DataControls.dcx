@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="11.1.2.62.94" id="DataControls"
+                    Package="mx.maleficarum.model">
+  <AdapterDataControl id="SpringBean" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="mx.maleficarum.model.SpringBean"
+                      BeanClass="mx.maleficarum.model.SpringBean" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="mx.maleficarum.model.SpringBean"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="mx.maleficarum.model.SpringBean" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>
